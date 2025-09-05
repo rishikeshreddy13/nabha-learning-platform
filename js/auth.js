@@ -82,7 +82,7 @@ class Auth {
             .from('users')
             .select('*')
             .eq('id', this.user.id)
-            .single();
+            .maybeSingle();
         
         return error ? null : data;
     }
